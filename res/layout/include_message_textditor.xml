@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingBottom="2dip"
+    android:paddingLeft="4dip"
+    android:paddingRight="4dip"
+    android:paddingTop="2dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/chat_textditor_iv_audio"
+            android:layout_width="45dp"
+            android:layout_height="46dip"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_chatbtn2"
+            android:clickable="true"
+            android:src="@drawable/ic_chat_audio_normal" />
+
+        <ImageButton
+            android:id="@+id/chat_textditor_ib_keyboard"
+            android:layout_width="45dp"
+            android:layout_height="46dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_chat_keyboard_normal"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+<!-- 输入框 -->
+ 	<coffee1993.nearchat.view.EmoticonsEditText
+        android:id="@+id/chat_textditor_eet_editer"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_sendmsg"
+        android:gravity="center_vertical"
+        android:imeOptions="flagNoExtractUi"
+        android:maxHeight="120dip"
+        android:maxLength="4000"
+        android:minHeight="46dip"
+        android:paddingTop="3dip" 
+        android:visibility="visible"
+        />
+ 	
+ 	
+     <Button 
+        android:id="@+id/chat_textditor_btn_audio"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:background="@drawable/btn_chat_voice_send"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:maxLength="4000"
+        android:minHeight="46dp"
+        android:paddingTop="3dip" 
+        android:visibility="gone"
+       /> 
+    
+   
+
+    <RelativeLayout
+        android:layout_width="36dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="6dp"
+        >
+
+        <ImageButton
+            android:id="@+id/chat_emote_change_ib_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="46dip"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_chat_keyboard_normal" />
+
+        <ImageButton
+            android:id="@+id/chat_textditor_ib_emote"
+            android:layout_width="match_parent"
+            android:layout_height="46dip"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_chat_emote_normal" />
+    </RelativeLayout>
+    
+    <!-- + -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+         >
+
+        <ImageButton
+            android:id="@+id/chat_textditor_ib_plus"
+            android:layout_width="46dip"
+            android:layout_height="46dip"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/btn_chatbtn2"
+            android:src="@drawable/ic_chat_plus_normal"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/chat_textditor_btn_send"
+            android:layout_width="46dp"
+            android:layout_height="46dip"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/btn_chatbtn3"
+            android:minWidth="50dip"
+            android:text="@string/chat_btn_send"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

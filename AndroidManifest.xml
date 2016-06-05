@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="coffee1993.nearchat"
+	android:installLocation="auto"
+	android:versionCode="1"
+	android:versionName="1" >
+
+	<uses-sdk
+		android:minSdkVersion="14"
+		android:targetSdkVersion="19" />
+
+	<!-- 安全相关权限 -->
+    <!-- 修改系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 发送持久广播 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 安全的网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 隐私相关权限 -->
+    <!-- 精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 大致位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 读取手机状态及身份 如获取IMEI -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 其他权限 -->
+    <!-- 查看WLAN连接 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 访问SD卡文件系统 安装卸载可移动储存设备文件系统 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 修改和删除SD卡中的内容 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 查阅敏感日志数据 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 防止手机休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 拍摄照片和视频 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 查看网络连接 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 连接WLAN和断开链接 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 控制震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+	<supports-screens
+		android:anyDensity="true"
+		android:largeScreens="true"
+		android:normalScreens="true"
+		android:resizeable="true"
+		android:smallScreens="true" />
+
+	<application
+		android:name="coffee1993.nearchat.NearChatApplication"
+		android:allowBackup="false"
+		android:hardwareAccelerated="false"
+		android:icon="@drawable/luncher"
+		android:label="@string/app_name"
+		android:largeHeap="true"
+		android:theme="@style/Theme.App" >
+		<activity
+			android:name="coffee1993.nearchat.activity.WelcomeActivity"
+			android:screenOrientation="portrait" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".activity.LoginActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/Theme.WhiteEdit"
+			android:windowSoftInputMode="adjustPan" >
+		</activity>
+		<activity
+			android:name=".activity.WifiapActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<activity
+			android:name=".activity.MainTabActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="adjustPan" >
+		</activity>
+		<activity
+			android:name=".activity.chat.ChatActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<activity
+			android:name=".activity.SettingInfoActivity"
+			
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="adjustPan" >
+		</activity>
+		<activity
+			android:name=".activity.ChooseAvatarActivity"
+			android:screenOrientation="portrait" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value=".activity.SettingMyInfoActivity" />
+		</activity>
+		<activity
+			android:name=".activity.AboutActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<activity
+			android:name=".imagefactory.ImageFactoryActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<activity
+			android:name="coffee1993.nearchat.activity.OtherProfileActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+		<activity
+			android:name="coffee1993.nearchat.activity.ImageBrowserActivity"
+			android:screenOrientation="portrait" >
+		</activity>
+	</application>
+
+</manifest>
